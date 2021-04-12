@@ -103,6 +103,7 @@ from datetime import datetime
 from datetime import timedelta
 
 # enter time of race today in format 12:00
+# Dependant on timezone (if in the uk you may need to -1 hour due to clock change)
 event_time='19:50'
 # date today + time of event as a string
 event_date_time=(datetime.today()).strftime("%Y-%m-%d")+" "+event_time
@@ -138,15 +139,11 @@ from datetime import datetime
 from datetime import timedelta
 
 
-# enter time of race today in format 12:00
+# Dependant on timezone (if in the uk you may need to -1 hour due to clock change)
 event_time='18:50'
-# date today + time of event as a string
 event_date_time=(datetime.today()).strftime("%Y-%m-%d")+" "+event_time
-# convert that string to a date time object
 event_date_time=datetime.strptime(event_date_time,"%Y-%m-%d %H:%M")
-# set max start date for 5 min after event
 start_date=event_date_time+timedelta(minutes=5)
-# set min start date for 5 min before event
 end_date=event_date_time-timedelta(minutes=5)
 
 events=client.get_available_events(states=['upcoming'],
@@ -207,15 +204,11 @@ client.init_session()
 from datetime import datetime
 from datetime import timedelta
 
-# enter time of race today in format 12:00
+# Dependant on timezone (if in the uk you may need to -1 hour due to clock change)
 event_time='18:50'
-# date today + time of event as a string
 event_date_time=(datetime.today()).strftime("%Y-%m-%d")+" "+event_time
-# convert that string to a date time object
 event_date_time=datetime.strptime(event_date_time,"%Y-%m-%d %H:%M")
-# set max start date for 5 min after event
 start_date=event_date_time+timedelta(minutes=5)
-# set min start date for 5 min before event
 end_date=event_date_time-timedelta(minutes=5)
 
 events=client.get_available_events(states=['upcoming'],

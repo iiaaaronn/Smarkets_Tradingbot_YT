@@ -101,10 +101,9 @@ client = sm_client.SmarketsClient()
 client.init_session()
 from datetime import datetime
 from datetime import timedelta
-start_date=datetime.datetime.now()+datetime.timedelta(days=1)
 
 # enter time of race today in format 12:00
-event_time='19:45'
+event_time='19:50'
 # date today + time of event as a string
 event_date_time=(datetime.today()).strftime("%Y-%m-%d")+" "+event_time
 # convert that string to a date time object
@@ -137,10 +136,10 @@ client = sm_client.SmarketsClient()
 client.init_session()
 from datetime import datetime
 from datetime import timedelta
-start_date=datetime.datetime.now()+datetime.timedelta(days=1)
+
 
 # enter time of race today in format 12:00
-event_time='19:45'
+event_time='18:50'
 # date today + time of event as a string
 event_date_time=(datetime.today()).strftime("%Y-%m-%d")+" "+event_time
 # convert that string to a date time object
@@ -207,10 +206,9 @@ client = sm_client.SmarketsClient()
 client.init_session()
 from datetime import datetime
 from datetime import timedelta
-start_date=datetime.datetime.now()+datetime.timedelta(days=1)
 
 # enter time of race today in format 12:00
-event_time='19:45'
+event_time='18:50'
 # date today + time of event as a string
 event_date_time=(datetime.today()).strftime("%Y-%m-%d")+" "+event_time
 # convert that string to a date time object
